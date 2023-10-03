@@ -7,10 +7,10 @@ def get_arguments():
     Parsing the arugments
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('--organization', '-o', help='Example) --organization 302793038411', dest='org', required=True)
-    parser.add_argument('--folder', '-f', help='Example) --folder 112793038411', dest='folder')
-    parser.add_argument('--services', '-s', nargs='+', 
-                        help='Example) --services "policyanalyzer.googleapis.com" "bigquery.googleapis.com"', 
+    parser.add_argument('-o', help='Example) -o 302793038411', dest='org', required=True)
+    parser.add_argument('-f', help='Example) -f 112793038411', dest='folder')
+    parser.add_argument('-s', nargs='+', 
+                        help='Example) -s "policyanalyzer.googleapis.com" "bigquery.googleapis.com"', 
                         default=[], dest='service', required=True)
 
     org_id = parser.parse_args().org
